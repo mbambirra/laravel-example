@@ -39,7 +39,7 @@ class UserTest extends TestCase
                 $json->has("data.id")
                     ->where("data.name", "Teste")
                     ->where("data.email", "teste@prodemge.gov.br")
-                    ->where("data.created", "2024-01-30")
+                    ->has("data.created")
                     ->missing('data.password')
             );
     }
@@ -57,7 +57,7 @@ class UserTest extends TestCase
                 $json->has("data.id")
                     ->where("data.name", "Teste")
                     ->where("data.email", "teste@prodemge.gov.br")
-                    ->where("data.created", "2024-01-30")
+                    ->has("data.created")
                     ->missing('data.password')
             );
     }
@@ -109,7 +109,7 @@ class UserTest extends TestCase
                 $json->has("data.id")
                     ->where("data.name", "Teste Alterado")
                     ->where("data.email", "teste@prodemge.gov.br")
-                    ->where("data.created", "2024-01-30")
+                    ->has("data.created")
                     ->missing('data.password')
             );
     }
